@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  
+
+<section class="profile-section">
+    <div class="profile-image">
+        <img src="<%= lawyer.image %>" alt="<%= lawyer.name %>">
+    </div>
+    <div class="profile-info">
+        <h2><%= lawyer.name %></h2>
+        <h3><%= lawyer.title %></h3>
+        <p class="description"><%= lawyer.description %></p>
+
+        <div class="contact-details">
+            <p>Email: <a href="mailto:<%= lawyer.email %>"><%= lawyer.email %></a></p>
+            <p>Phone: <%= lawyer.phone %></p>
+            <p>Location: <%= lawyer.location %></p>
+        </div>
+
+        <div class="details">
+            <h4>Experience: <%= lawyer.experience %></h4>
+            <h4>Specialties:</h4>
+            <ul>
+                <% lawyer.specialties.forEach(function(specialty) { %>
+                    <li><%= specialty %></li>
+                <% }) %>
+            </ul>
+            <h4>Education:</h4>
+            <ul>
+                <% lawyer.education.forEach(function(edu) { %>
+                    <li><%= edu %></li>
+                <% }) %>
+            </ul>
+            <h4>Awards:</h4>
+            <ul>
+                <% lawyer.awards.forEach(function(award) { %>
+                    <li><%= award %></li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</section>
+
+

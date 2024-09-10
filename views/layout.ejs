@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= lawyer.name %> - Profile</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="/images/temple-logo.png" alt="Temple of Justice Logo" class="logo">
+            <h1>Lawyer Profile</h1>
+        </div>
+    </header>
+    
+    <main>
+        <%= body %>  <!-- Correct way to render body content -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Contact Information</strong></p>
+                <p>Email: <a href="mailto:<%= lawyer.email %>"><%= lawyer.email %></a></p>
+                <p>Phone: <a href="tel:<%= lawyer.phone %>"><%= lawyer.phone %></a></p>
+                <p>Address: <%= lawyer.location %></p>
+            </div>
+    
+            <div class="social-links">
+                <a href="#"><img src="/image/facebook-icon.png" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="/image/linkedin-icon.png" alt="LinkedIn" class="social-icon"></a>
+                <a href="#"><img src="/image/twitter-icon.png" alt="Twitter" class="social-icon"></a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; <%= new Date().getFullYear() %> <%= lawyer.name %>. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
