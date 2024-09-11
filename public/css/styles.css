@@ -1,188 +1,206 @@
-/* Base styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  padding-top: 70px; 
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header styling */
+/* Header Styles */
 header {
-    background-color: #2b3a4b;
-    padding: 20px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
+  background-color: #2C3E50; 
+  color: #fff;
+  padding: 15px 30px; 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .logo {
-    width: 60px;
-    height: auto;
-    margin-right: 15px;
+  max-height: 50px;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: bold;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
 }
 
-/* Main profile section */
+nav a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2C3E50; /* Same color as header */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Profile Section Styles */
 .profile-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 20px;
+}
+
+.profile-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.profile-image {
+  flex: 1;
+  padding: 20px;
 }
 
 .profile-image img {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.profile-image img:hover {
-    transform: scale(1.05);
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile-info {
-    margin-left: 50px;
-    max-width: 600px;
+  flex: 2;
+  padding: 20px;
 }
 
-.profile-info h2 {
-    font-size: 36px;
-    color: #2b3a4b;
+.profile-info h1 {
+  margin-top: 0;
+  color: #333;
 }
 
 .profile-info h3 {
-    font-size: 24px;
-    color: #d1b000;
-    margin-bottom: 20px;
+  color: #555;
 }
 
-.description {
-    font-style: italic;
-    margin-bottom: 30px;
-    color: #555;
+.contact-details p {
+  margin: 5px 0;
 }
 
-.contact-details {
-    background-color: #2b3a4b;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 18px;
+.details {
+  margin-top: 20px;
 }
 
-.contact-details a {
-    color: #d1b000;
+.card-container {
+  display: flex;
+  gap: 20px;
 }
 
-.details h4 {
-    font-size: 22px;
-    color: #2b3a4b;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: 600;
+.card {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 15px;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.details ul {
-    list-style-type: none;
+.card h3 {
+  margin-top: 0;
 }
 
-.details ul li {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-left: 5px solid #d1b000;
-    transition: background-color 0.3s;
+/* About Section Styles */
+.about-section {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.details ul li:hover {
-    background-color: #e2e2e2;
+.about-section h1 {
+  margin: 0;
+  color: #2C3E50; /* Matching header color */
 }
 
-/* Footer styling */
-
-footer {
-    background-color: #2b3a4b;
-    color: white;
-    padding: 20px 50px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 50px;
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-top: 1px solid #444;
+.team-member {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px;
 }
 
-.contact-info {
-    text-align: left;
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  max-height: 150px;
+  object-fit: cover;
 }
 
-.contact-info a {
-    color: #d1b000;
-    text-decoration: none;
+/* Contact Section Styles */
+.contact-section {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.social-links {
-    display: flex;
-    justify-content: flex-end;
+.contact-section h1 {
+  margin: 0;
+  color: #2C3E50; /* Matching header color */
 }
 
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 15px;
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.footer-bottom {
-    margin-top: 10px;
-    font-size: 14px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
+.contact-section label {
+  font-weight: bold;
 }
-/* Responsive styling */
-@media (max-width: 768px) {
-    .profile-section {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .profile-info {
-        margin-left: 0;
-        margin-top: 20px;
-    }
+.contact-section input, 
+.contact-section textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
-    .header-content h1 {
-        font-size: 24px;
-    }
+.contact-section button {
+  padding: 10px;
+  background-color: #2C3E50; /* Matching header color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #34495E;
 }

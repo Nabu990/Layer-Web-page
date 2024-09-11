@@ -1,0 +1,13 @@
+<section class="about-section">
+    <h1>About Us</h1>
+    <p>We are a dedicated law firm with a focus on justice and client satisfaction.</p>
+    <div class="team">
+        <% teamMembers.forEach(member => { %>
+            <div class="team-member">
+                <img src="<%= member.image %>" alt="<%= member.name %>">
+                <h3><%= member.name %></h3>
+                <p><%= member.title %></p>
+            </div>
+        <% }) %>
+    </div>
+</section>
