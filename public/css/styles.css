@@ -178,7 +178,8 @@ footer {
 }
 
 .team-member img {
-  width: 100%;
+  width: 70%;
+  height: 100%;
   border-radius: 50%;
   max-height: 150px;
   object-fit: cover;
@@ -290,5 +291,13 @@ footer {
   .contact-section h1 {
       font-size: 1.25rem; /* Further reduce heading sizes for very small screens */
   }
+
+.card-container {
+  display: block;
+  gap: 20px;
+}
+.card {
+  margin-bottom: 1rem;
+}
 }
 

@@ -14,11 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
   const lawyer = {
-      name: "Perious Wise",
+      name: "Perious Wlies",
       title: "Learning Law",
       description: "Experienced attorney specializing in criminal law.",
-      email: "willieklvin511@gmail.com",
-      phone: "+231 0770381510",
+      email: "pwlies2002@gmail.com",
+      phone: "+231 0777518216",
       location: "AB Tober Road, Liberia",
       experience: "3 month",
       specialties: ["Criminal Law", "Civil Rights", "Personal Injury"],
@@ -30,8 +30,8 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   const teamMembers = [
-    { name: 'Kelvin O.J Willie', title: 'Senior Partner', image: '/images/kelvin' },
-    { name: 'Nabu Thouth', title: 'Lead Attorney', image: '/images/Sirkel.jpg.jpg' }
+    { name: 'Kelvin O.J Willie', title: 'Senior Partner', image: '/image/kelvin.jpg' },
+    { name: 'Nabu Thouth', title: 'Lead Attorney', image: '/image/Sirkel.jpg' }
   ];
   res.render('about', { title: 'About Us', teamMembers });
 });
@@ -40,6 +40,10 @@ app.get('/contact', (req, res) => {
   res.render('contact', { title: 'Contact Us' });
 });
 
+app.post('/submit-contact', (req,res)=>{
+res.redirect('/')
+console.log(req.body)
+})
 
 
 
