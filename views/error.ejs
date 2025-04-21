@@ -1,0 +1,14 @@
+
+<div class="error-container">
+    <h1>Server Error</h1>
+    <p>We apologize for the inconvenience. Our team has been notified.</p>
+    
+    <% if (error && Object.keys(error).length > 0) { %>
+        <div class="error-details">
+            <h3>Error Details:</h3>
+            <pre><%= error.stack %></pre>
+        </div>
+    <% } %>
+    
+    <a href="/" class="btn">Return to Homepage</a>
+</div>

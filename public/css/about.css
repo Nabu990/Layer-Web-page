@@ -1,65 +1,293 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Base Reset */
+* {
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
-    color: #333;
-}
-header {
-    background: #004d99;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-header img {
-    width: 150px;
-    vertical-align: middle;
-}
-main {
-    padding: 20px;
-}
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #333;
-}
-.team-section {
+    box-sizing: border-box;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #ffffff;
+    padding: 20px 40px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.team-member {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    width: 250px;
-}
-.team-member img {
-    width: 100px;
-    height: 100px;
-    /* border-radius: 5%; */
-    margin-bottom: 10px;
-}
-.footer-content {
-    background: #004d99;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-.footer-content a {
-    color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e6e6e6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    color: #003366;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  nav {
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav a {
     text-decoration: none;
-    margin: 0 10px;
-}
-.footer-content .social-links img {
-    width: 24px;
-}
-.footer-bottom {
-    background: #003366;
-    color: white;
-    padding: 10px;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    background-color: #003366;
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #003366;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  
+
+
+.about-section {
+    padding: 5rem 1rem;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+    color: #2b2b2b;
+  }
+  
+  .section-header {
     text-align: center;
-}
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1d1d1d;
+  }
+  
+  .divider {
+    width: 80px;
+    height: 4px;
+    background-color: #006400;
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+  }
+  
+  .firm-overview h2,
+  .practice-areas h2,
+  .team-section h2,
+  .firm-values h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .firm-overview p,
+  .practice-areas p {
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .stats-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  
+  .stat-item {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+    color: #006400;
+    font-weight: 700;
+  }
+  
+  .stat-label {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .practice-areas .areas-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .practice-areas li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .practice-areas i {
+    margin-right: 0.5rem;
+    color: #006400;
+  }
+  
+  .team-section {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .team-subtitle {
+    color: #777;
+    margin-bottom: 2rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .team-member-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .member-image {
+    position: relative;
+  }
+  
+  .member-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,100,0,0.85), rgba(0,100,0,0.1));
+    width: 100%;
+    padding: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .team-member-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .member-info {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .member-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .member-info p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+  }
+  
+  .btn.btn-outline {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.5rem 1rem;
+    color: #006400;
+    border: 1px solid #006400;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.btn-outline:hover {
+    background-color: #006400;
+    color: white;
+  }
+  
+  .firm-values {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .value-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  }
+  
+  .value-item i {
+    font-size: 2rem;
+    color: #006400;
+    margin-bottom: 1rem;
+  }
+  
+  .value-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .value-item p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  

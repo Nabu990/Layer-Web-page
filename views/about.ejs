@@ -1,13 +1,104 @@
+<link rel="stylesheet" href="/css/about.css">
+
+
 <section class="about-section">
-    <h1>About Us</h1>
-    <p>We are a dedicated law firm with a focus on justice and client satisfaction.</p>
-    <div class="team">
-        <% teamMembers.forEach(member => { %>
-            <div class="team-member">
-                <img src="<%= member.image %>" alt="<%= member.name %>">
-                <h3><%= member.name %></h3>
-                <p><%= member.title %></p>
+    <div class="container">
+        <div class="section-header">
+            <h1 class="section-title">About Our Firm</h1>
+            <div class="divider"></div>
+            <p class="section-subtitle">Committed to Excellence in Legal Representation</p>
+        </div>
+
+        <div class="about-content">
+            <div class="firm-overview">
+                <h2>Our Legacy</h2>
+                <p>Founded in 2024, <%= firmName %> has established itself as a premier full-service law firm with a reputation for excellence, integrity, and results. Our attorneys bring together decades of combined experience across multiple practice areas to provide comprehensive legal solutions tailored to our clients' unique needs.</p>
+                
+                <h2>Our Philosophy</h2>
+                <p>We believe in a client-centered approach to legal practice. Every case we handle receives the individualized attention it deserves, combining thorough legal analysis with strategic thinking to achieve optimal outcomes. Our commitment to professionalism and ethical practice has earned us the trust of clients and respect within the legal community.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number"><%= yearsExperience %></span>
+                        <span class="stat-label">Years Combined Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><%= casesHandled %></span>
+                        <span class="stat-label">Cases Successfully Handled</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><%= attorneyCount %></span>
+                        <span class="stat-label">Dedicated Attorneys</span>
+                    </div>
+                </div>
             </div>
-        <% }) %>
+            
+            <div class="practice-areas">
+                <h2>Practice Areas</h2>
+                <ul class="areas-list">
+                    <% practiceAreas.forEach(area => { %>
+                        <li><i class="fas fa-balance-scale"></i> <%= area %></li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2>Our Legal Team</h2>
+            <p class="team-subtitle">Meet the dedicated professionals who make our firm exceptional</p>
+            
+            <div class="team-grid">
+                <% teamMembers.forEach(member => { %>
+                    <div class="team-member-card">
+                        <div class="member-image">
+                            <img src="<%= member.image %>" alt="Portrait of <%= member.name %>" class="img-responsive">
+                            <div class="overlay">
+                                <div class="social-links">
+                                    <% if(member.linkedin) { %>
+                                        <a href="<%= member.linkedin %>" aria-label="<%= member.name %>'s LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                                    <% } %>
+                                    <% if(member.email) { %>
+                                        <a href="mailto:<%= member.email %>" aria-label="Email <%= member.name %>"><i class="fas fa-envelope"></i></a>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3><%= member.name %></h3>
+                            <p class="title"><%= member.title %></p>
+                            <p class="education"><%= member.education %></p>
+                            <p class="bio-preview"><%= member.bio.substring(0, 100) %>...</p>
+                            <a href="/attorneys/<%= member.slug %>" class="btn btn-outline">View Profile</a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+
+        <div class="firm-values">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Integrity</h3>
+                    <p>We uphold the highest ethical standards in all our professional dealings.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Excellence</h3>
+                    <p>We strive for legal excellence in every case we undertake.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Commitment</h3>
+                    <p>We are fully dedicated to achieving the best possible outcomes for our clients.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Respect</h3>
+                    <p>We treat every client with dignity, compassion, and understanding.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
